@@ -17,7 +17,7 @@ def union(A,B):
     arr += B
     return arr
 
-
+print "UNION"
 print union([1,2,3,3,3,4,5],[1,2])
 
 
@@ -29,6 +29,20 @@ def intersection(A,B):
     arr = [x for x in A if x in B]
     return arr
 
-
+print "INTERSECTION"
 print intersection([1,2,3,3,3], [1,2,3,7,8,0])
 
+def set_diff(U,A):
+    '''
+    set of all members of U that are not members of A. 
+    The set difference {1, 2, 3} \ {2, 3, 4} is {1}
+    The set difference {2, 3, 4} \ {1, 2, 3} is {4}
+    '''
+    arr = [x for x in U if x not in A]
+    return arr
+
+print "SET DIFF"
+print set_diff([1,2,3], [2,3,4])
+print set_diff([2,3,4], [1,2,3])
+    
+    
