@@ -46,3 +46,15 @@ print set_diff([1,2,3], [2,3,4])
 print set_diff([2,3,4], [1,2,3])
     
     
+def sym_diff(A,B):
+    '''
+    set of all objects that are a member of exactly one of A and B
+    for the sets {1, 2, 3} and {2, 3, 4} , the symmetric difference set is {1, 4}
+    '''
+
+    arr = [x for x in A if x not in B]
+    arr += [x for x in B if x not in A]
+    return arr
+
+print "SYM DIFF"
+print sym_diff([1,2,3], [2,3,4])
